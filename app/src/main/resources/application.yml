@@ -1,12 +1,16 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/studs?currentSchema=s311737
-    username: s311737
-    password: q3IYHSWtCGuc8Kmw
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: mpanchuk
+    password:
     driver-class-name: org.postgresql.Driver
+  jta:
+    atomikos:
+      datasource:
+        unique-resource-name: t293jg2598g204jg034
   jpa:
     hibernate:
-      ddl-auto: create
+          ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -17,8 +21,13 @@ spring:
   sql:
     init:
       mode: always
-  atomikos:
-    properties:
-      max-timeout: 900000
-server:
-  port: 1233
+
+  server:
+    port: 1233
+
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+
+io.reflectoring.kafka.bootstrap-servers: localhost:9092
