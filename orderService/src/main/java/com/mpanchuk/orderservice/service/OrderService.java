@@ -14,6 +14,7 @@ import com.mpanchuk.app.repository.StashRepository;
 import com.mpanchuk.app.service.JwtService;
 import com.mpanchuk.app.util.graph.RouteFinder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -45,6 +46,7 @@ public class OrderService {
         this.jwtService = jwtService;
     }
 
+    @KafkaListener(topics = "order")
     public OrderResponse makeOrder(String username, String destination, String coupon) throws NoSuchElementException, PriceException {
         if (!checkOrderSum(username)) {
             throw new PriceException();
