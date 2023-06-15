@@ -2,6 +2,7 @@ package com.mpanchuk.orderservice.service;
 
 import com.mpanchuk.app.domain.CityDistancePair;
 import com.mpanchuk.app.domain.StashPair;
+import com.mpanchuk.app.domain.messaging.CreateOrderDto;
 import com.mpanchuk.app.domain.response.OrderResponse;
 import com.mpanchuk.app.exception.PriceException;
 import com.mpanchuk.app.model.City;
@@ -13,13 +14,16 @@ import com.mpanchuk.app.repository.ItemRepository;
 import com.mpanchuk.app.repository.StashRepository;
 import com.mpanchuk.app.service.JwtService;
 import com.mpanchuk.app.util.graph.RouteFinder;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
+@RequiredArgsConstructor
 public class OrderService {
 
     private final StashRepository stashRepository;
@@ -29,25 +33,14 @@ public class OrderService {
 
     private final RouteFinder routeFinder;
 
-    private final JwtService jwtService;
+//    private final KafkaTemplate<String, Object> template;
 
-    @Autowired
-    public OrderService(StashRepository stashRepository,
-                        CityRepository cityRepository,
-                        ItemRepository itemRepository,
-                        RouteFinder routeFinder,
-                        CouponRepository couponRepository,
-                        JwtService jwtService) {
-        this.stashRepository = stashRepository;
-        this.cityRepository = cityRepository;
-        this.itemRepository = itemRepository;
-        this.routeFinder = routeFinder;
-        this.couponRepository = couponRepository;
-        this.jwtService = jwtService;
-    }
-
-    @KafkaListener(topics = "order")
-    public OrderResponse makeOrder(String username, String destination, String coupon) throws NoSuchElementException, PriceException {
+    @KafkaListener(topics = "order-request", containerFactory = "singleFactory", groupId = "orders")
+    public void makeOrder(CreateOrderDto createOrderDto) throws NoSuchElementException, PriceException {
+        System.out.println(createOrderDto);
+        String username = createOrderDto.getUsername();
+        String destination = createOrderDto.getDestination();
+        String coupon = createOrderDto.getCoupon();
         if (!checkOrderSum(username)) {
             throw new PriceException();
         }
@@ -74,10 +67,10 @@ public class OrderService {
 
         int price = stashRepository.calcPrice(username);
         if (cp.isEmpty()) {
-            return new OrderResponse(itemToCity, destination, price, 0, price, "Без купона");
+//            template.send("order-response", new OrderResponse(itemToCity, destination, price, 0, price, "Без купона"));
         }
         int discount = (int) (price * cp.get().getDiscount());
-        return new OrderResponse(itemToCity, destination, price, discount, price - discount, "Купон применен");
+//        template.send("order-response", new OrderResponse(itemToCity, destination, price, discount, price - discount, "Купон применен"));
     }
 
     private boolean checkOrderSum(String username) {
