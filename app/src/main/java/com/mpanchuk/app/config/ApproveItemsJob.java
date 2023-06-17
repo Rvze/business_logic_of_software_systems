@@ -19,12 +19,7 @@ public class ApproveItemsJob implements Job {
     private ItemService itemService;
 
     @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        Page<ItemToAddResponse> itms = itemService.getItemsToAdd(0, 100);
-        List<Long> itmsToAddIds = new ArrayList<>();
-        for (ItemToAddResponse resp : itms) {
-            itmsToAddIds.add(resp.getId());
-        }
-        itemService.addItemsFromManager(itmsToAddIds);
+    public void execute(JobExecutionContext jobExecutionContext) {
+        itemService.approveItemsAuto();
     }
 }

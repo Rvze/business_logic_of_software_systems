@@ -38,6 +38,7 @@ public class QuartzConfig {
         Properties properties = new Properties();
         properties.setProperty("org.quartz.scheduler.instanceName", "MyInstanceName");
         properties.setProperty("org.quartz.scheduler.instanceId", "Instance1");
+        properties.setProperty("org.quartz.jobStore.driverDelegateClass", "org.quartz.impl.jdbcjobstore.PostgreSQLDelegate");
 
         schedulerFactory.setOverwriteExistingJobs(true);
         schedulerFactory.setAutoStartup(true);

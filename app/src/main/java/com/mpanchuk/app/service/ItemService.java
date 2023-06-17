@@ -101,4 +101,24 @@ public class ItemService {
         if (request.name() == null || request.name().equals(""))
             throw new ItemToAddValidationException("Название товара не может быть пустым!");
     }
+
+
+    @Transactional
+    public void approveItemsAuto() {
+        var pageable = PageRequest.of(0, 199);
+        var itemsToAdd = itemToAddRepository.findAll(pageable);
+        Page<ItemToAddResponse> resp = itemsToAdd.map(itemToAddMapper::toResponse);
+        List<Long> ids = new ArrayList<>();
+        for (ItemToAddResponse itm : resp.getContent()) {
+            ids.add(itm.getId());
+        }
+
+        ids.forEach(it -> {
+            var itemToAdd = itemToAddRepository.findById(it).orElseThrow(
+                    () -> new NoSuchItemException(String.format("Item to add не сущетвует: %s", it)));
+            var item = mapper.toEntity(itemToAdd);
+            itemToAddRepository.delete(itemToAdd);
+            itemRepository.save(item);
+        });
+    }
 }
