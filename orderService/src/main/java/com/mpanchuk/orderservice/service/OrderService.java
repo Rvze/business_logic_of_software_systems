@@ -1,25 +1,22 @@
 package com.mpanchuk.orderservice.service;
 
 import com.mpanchuk.app.domain.CityDistancePair;
-import com.mpanchuk.app.domain.StashPair;
-import com.mpanchuk.app.domain.response.OrderResponse;
+import com.mpanchuk.app.domain.messaging.CreateOrderDto;
 import com.mpanchuk.app.exception.PriceException;
-import com.mpanchuk.app.model.City;
-import com.mpanchuk.app.model.Coupon;
-import com.mpanchuk.app.model.Item;
-import com.mpanchuk.app.repository.CityRepository;
-import com.mpanchuk.app.repository.CouponRepository;
-import com.mpanchuk.app.repository.ItemRepository;
-import com.mpanchuk.app.repository.StashRepository;
-import com.mpanchuk.app.service.JwtService;
-import com.mpanchuk.app.util.graph.RouteFinder;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mpanchuk.orderservice.model.*;
+import com.mpanchuk.orderservice.repository.*;
+import com.mpanchuk.orderservice.util.graph.RouteFinder;
+import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.NoSuchElementException;
+import java.util.Optional;
+import java.util.Set;
 
 @Service
+@RequiredArgsConstructor
 public class OrderService {
 
     private final StashRepository stashRepository;
@@ -29,25 +26,14 @@ public class OrderService {
 
     private final RouteFinder routeFinder;
 
-    private final JwtService jwtService;
+    private final OrderRepository orderRepository;
 
-    @Autowired
-    public OrderService(StashRepository stashRepository,
-                        CityRepository cityRepository,
-                        ItemRepository itemRepository,
-                        RouteFinder routeFinder,
-                        CouponRepository couponRepository,
-                        JwtService jwtService) {
-        this.stashRepository = stashRepository;
-        this.cityRepository = cityRepository;
-        this.itemRepository = itemRepository;
-        this.routeFinder = routeFinder;
-        this.couponRepository = couponRepository;
-        this.jwtService = jwtService;
-    }
-
-    @KafkaListener(topics = "order")
-    public OrderResponse makeOrder(String username, String destination, String coupon) throws NoSuchElementException, PriceException {
+    @KafkaListener(topics = "order-request", groupId = "orders")
+    public void makeOrder(CreateOrderDto createOrderDto) throws NoSuchElementException, PriceException {
+        System.out.println("MEssage :  " + createOrderDto);
+        String username = createOrderDto.getUsername();
+        String destination = createOrderDto.getDestination();
+        String coupon = createOrderDto.getCoupon();
         if (!checkOrderSum(username)) {
             throw new PriceException();
         }
@@ -58,26 +44,27 @@ public class OrderService {
         }
         Optional<Coupon> cp = couponRepository.findByName(coupon);
         City destinationCity = cityRepository.findByName(destination).orElseThrow();
-        List<StashPair<Item, Integer>> storage = stashRepository.getStorage(username);
+        Stash storage = stashRepository.getStorage(username);
         HashMap<String, CityDistancePair<String, Integer>> itemToCity = new HashMap<>();
 
-        for (StashPair<Item, Integer> pair : storage) {
-            Set<City> cities = itemRepository.findById(pair.getFirst().getId()).orElseThrow().getCities();
+        for (Item pair : storage.getItems()) {
+            Set<City> cities = itemRepository.findById(pair.getId()).orElseThrow().getCities();
             int[] result = routeFinder.findRoute(destinationCity.getId(), cities);
             String cityNameFrom = cityRepository.findById((long) result[0]).orElseThrow().getName();
             if (result[1] > 1200) {
-                itemToCity.put(pair.getFirst().getName(), new CityDistancePair<>("Невозможно доставить, дистанция больше 1200", result[1]));
+                itemToCity.put(pair.getName(), new CityDistancePair<>("Невозможно доставить, дистанция больше 1200", result[1]));
             } else
-                itemToCity.put(pair.getFirst().getName(), new CityDistancePair<>(cityNameFrom, result[1]));
+                itemToCity.put(pair.getName(), new CityDistancePair<>(cityNameFrom, result[1]));
         }
 
 
         int price = stashRepository.calcPrice(username);
         if (cp.isEmpty()) {
-            return new OrderResponse(itemToCity, destination, price, 0, price, "Без купона");
+            orderRepository.save(Order.builder().destination(destination).price(price).totalPrice(price).discount(0).message("Без купона").build());
+            return;
         }
         int discount = (int) (price * cp.get().getDiscount());
-        return new OrderResponse(itemToCity, destination, price, discount, price - discount, "Купон применен");
+        orderRepository.save(Order.builder().destination(destination).price(price).totalPrice(price - discount).discount(discount).message("Без купона").build());
     }
 
     private boolean checkOrderSum(String username) {

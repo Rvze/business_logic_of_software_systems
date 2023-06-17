@@ -40,4 +40,8 @@ public class Item implements Serializable {
     )
     @JsonIgnoreProperties("items")
     private Set<City> cities;
+
+    @ManyToOne
+    @JoinColumn(name = "stash_id")
+    private Stash stash;
 }

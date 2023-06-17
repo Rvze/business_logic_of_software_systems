@@ -5,7 +5,6 @@ import com.mpanchuk.app.repository.DistanceRepository;
 import com.mpanchuk.app.util.model.Adjacency;
 import com.mpanchuk.app.util.model.Pair;
 import jakarta.annotation.PostConstruct;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

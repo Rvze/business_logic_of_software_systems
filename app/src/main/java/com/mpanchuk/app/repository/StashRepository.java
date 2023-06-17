@@ -1,85 +1,62 @@
 package com.mpanchuk.app.repository;
 
-import com.mpanchuk.app.domain.StashPair;
+import com.mpanchuk.app.exception.ItemToAddValidationException;
 import com.mpanchuk.app.model.Item;
+import com.mpanchuk.app.model.Stash;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
+import java.util.ArrayList;
 
 @Repository
+@RequiredArgsConstructor
 public class StashRepository {
 
     // username - list<stash_pair>>
-    Map<String, List<StashPair<Item, Integer>>> storage = new HashMap<>();
+    private final StashJpaRepository repository;
+    private final ItemRepository itemRepository;
 
-    public List<StashPair<Item, Integer>> addItem(String username, Item item, int amount) {
-        List<StashPair<Item, Integer>> userStash = storage.getOrDefault(username, null) ;
-        if (userStash == null) {
-            userStash = new ArrayList<>();
+    @Transactional
+    public Stash addItem(String username, Item item, int amount) {
+        Stash stash = repository.findByUsername(username);
+        Integer price;
+        if (stash == null) {
+            price = 0;
+            stash = Stash.builder().username(username).items(new ArrayList<>()).build();
+            for (int i = 0; i < amount; i++) {
+                stash.getItems().add(item);
+                price += item.getPrice();
+            }
+        } else {
+            price = stash.getPrice();
+            for (int i = 0; i < amount; i++) {
+                stash.getItems().add(item);
+                price += item.getPrice();
+            }
         }
-
-        Optional<StashPair<Item, Integer>> optionalStashPair = userStash.stream()
-                .filter(pair -> pair.getFirst().getId().equals(item.getId()))
-                .findFirst();
-
-        if (optionalStashPair.isEmpty()) {
-            userStash.add(new StashPair<>(item, amount));
-        }
-
-        else {
-            StashPair<Item, Integer> pair = optionalStashPair.get();
-            pair.setSecond(pair.getSecond() + amount);
-        }
-
-        storage.put(username, userStash);
-
-        return storage.getOrDefault(username, null);
-    }
-    public List<StashPair<Item, Integer>> deleteItem(String username, Item item, int amount) {
-        List<StashPair<Item, Integer>> stashPairList = storage.getOrDefault(username, null);
-
-        if (stashPairList == null) {
-            return Collections.emptyList();
-        }
-
-        Optional<StashPair<Item, Integer>> optionalPair = stashPairList.stream()
-                .filter(pair -> pair.getFirst().getId().equals(item.getId()))
-                .findFirst();
-
-        if (optionalPair.isEmpty()) {
-            return stashPairList;
-        }
-
-        StashPair<Item, Integer> pair = optionalPair.get();
-
-        int newAmount = Math.max(pair.getSecond() - amount, 0);
-
-        if (newAmount == 0) {
-            stashPairList.remove(pair);
-        }
-
-        else {
-            pair.setSecond(newAmount);
-        }
-
-        /// storage.put(username, stashPairList);
-
-        return stashPairList;
+        item.setStash(stash);
+        itemRepository.save(item);
+        stash.setPrice(price);
+        repository.save(stash);
+        return stash;
     }
 
-    public List<StashPair<Item, Integer>> getStorage(String username) {
-        return storage.getOrDefault(username, null);
+    public Stash deleteItem(String username, Item item, int amount) {
+        Stash stash = repository.findByUsername(username);
+        if (stash == null) {
+            throw new ItemToAddValidationException(String.format("Stash not found by username : %s", username));
+        }
+        Integer price = stash.getPrice();
+        for (int i = 0; i < amount; i++) {
+            price -= item.getPrice();
+            stash.getItems().remove(item);
+        }
+        stash.setPrice(price);
+        return stash;
     }
 
-    public int calcPrice(String username) {
-        List<StashPair<Item, Integer>> stashPairList = storage.getOrDefault(username, null);
-        if (stashPairList == null) {
-            return 0;
-        }
-
-        return stashPairList.stream()
-                .mapToInt(pair -> pair.getFirst().getPrice() * pair.getSecond())
-                .sum();
-
+    public Stash getStorage(String username) {
+        return repository.findByUsername(username);
     }
 }

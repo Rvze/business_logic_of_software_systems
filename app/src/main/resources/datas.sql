@@ -133,61 +133,33 @@ insert into distance (length, ct1_id, ct2_id)
 values (461, 18, 19);
 
 
--- create sequence item_seq start 1;
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'apple', 100);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'orange', 150);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'watermelon', 120);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'strawberry', 130);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'blueberry', 100);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'potato', 35);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'tomato', 59);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'garlic', 85);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'pesto', 140);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'sandwich', 250);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'beef', 550);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'pork', 340);
--- insert into item (id, name, price)
--- values (nextval('item_seq'), 'chicken', 290);
-
+-- create sequence item_id_seq start 1;
 insert into item (id, name, price)
-values (1, 'apple', 100);
+values (nextval('item_id_seq'), 'apple', 100);
 insert into item (id, name, price)
-values (2, 'orange', 150);
+values (nextval('item_id_seq'), 'orange', 150);
 insert into item (id, name, price)
-values (3, 'watermelon', 120);
+values (nextval('item_id_seq'), 'watermelon', 120);
 insert into item (id, name, price)
-values (4, 'strawberry', 130);
+values (nextval('item_id_seq'), 'strawberry', 130);
 insert into item (id, name, price)
-values (5, 'blueberry', 100);
+values (nextval('item_id_seq'), 'blueberry', 100);
 insert into item (id, name, price)
-values (6, 'potato', 35);
+values (nextval('item_id_seq'), 'potato', 35);
 insert into item (id, name, price)
-values (7, 'tomato', 59);
+values (nextval('item_id_seq'), 'tomato', 59);
 insert into item (id, name, price)
-values (8, 'garlic', 85);
+values (nextval('item_id_seq'), 'garlic', 85);
 insert into item (id, name, price)
-values (9, 'pesto', 140);
+values (nextval('item_id_seq'), 'pesto', 140);
 insert into item (id, name, price)
-values (10, 'sandwich', 250);
+values (nextval('item_id_seq'), 'sandwich', 250);
 insert into item (id, name, price)
-values (11, 'beef', 550);
+values (nextval('item_id_seq'), 'beef', 550);
 insert into item (id, name, price)
-values (12, 'pork', 340);
+values (nextval('item_id_seq'), 'pork', 340);
 insert into item (id, name, price)
-values (13, 'chicken', 290);
-
+values (nextval('item_id_seq'), 'chicken', 290);
 
 
 insert into item_cities (item_id, cities_id)

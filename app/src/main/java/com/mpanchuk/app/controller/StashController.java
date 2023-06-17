@@ -1,5 +1,6 @@
 package com.mpanchuk.app.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mpanchuk.app.domain.response.StashResponse;
 import com.mpanchuk.app.model.Item;
 import com.mpanchuk.app.domain.StashPair;
@@ -49,7 +50,7 @@ public class StashController implements SecuredRestController{
     }
 
     @PutMapping("/add")
-    public ResponseEntity<List<StashResponse>> addItem(@RequestParam int itemId, @RequestParam(defaultValue = "1") int amount) {
+    public ResponseEntity<List<StashResponse>> addItem(@RequestParam int itemId, @RequestParam(defaultValue = "1") int amount) throws JsonProcessingException {
         var arr = stashService.addItem(getUsername(), (long) itemId, amount);
         return new ResponseEntity<>(arr, HttpStatus.CREATED) ;
     }

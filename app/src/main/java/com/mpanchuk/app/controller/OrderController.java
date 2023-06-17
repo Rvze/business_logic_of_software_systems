@@ -1,6 +1,7 @@
 package com.mpanchuk.app.controller;
 
 import com.mpanchuk.app.domain.messaging.CreateOrderDto;
+import com.mpanchuk.app.domain.response.OrderResponse;
 import com.mpanchuk.app.service.OrderService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +22,8 @@ public class OrderController implements SecuredRestController {
         this.orderService = orderService;
     }
 
-    @PostMapping
-    public ResponseEntity<Void> makeOrder(@RequestBody CreateOrderDto createOrderDto) {
+    @PostMapping(value = "make")
+    public ResponseEntity<OrderResponse> makeOrder(@RequestBody CreateOrderDto createOrderDto) {
         orderService.makeOrder(createOrderDto);
         return ResponseEntity.ok().build();
     }

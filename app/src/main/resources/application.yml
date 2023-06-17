@@ -10,7 +10,7 @@ spring:
         unique-resource-name: t293jg2598g204jg034
   jpa:
     hibernate:
-        # ddl-auto: create
+#          ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -21,13 +21,10 @@ spring:
   sql:
     init:
       mode: always
-
   quartz:
     job-store-type: jdbc
     jdbc:
       initialize-schema: always
-
 server:
   port: 1233
-
 io.reflectoring.kafka.bootstrap-servers: localhost:9092
