@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-    #      ddl-auto: create
+#      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -14,9 +14,16 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     defer-datasource-initialization: true
+  data:
+    redis:
+      port: 6379
+      host: localhost
   sql:
     init:
       mode: always
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
 server:
   port: 1234
-io.reflectoring.kafka.bootstrap-servers: localhost:9092

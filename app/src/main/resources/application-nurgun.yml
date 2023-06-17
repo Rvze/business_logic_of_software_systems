@@ -1,6 +1,4 @@
 spring:
-  kafka:
-    server
   datasource:
     url: jdbc:postgresql://localhost:5433/blps?currentSchema=lab2
     username: postgres
@@ -12,7 +10,7 @@ spring:
         unique-resource-name: t293jg2598g204jg034
   jpa:
     hibernate:
-    #      ddl-auto: create
+#      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -23,8 +21,18 @@ spring:
   sql:
     init:
       mode: always
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+  data:
+    redis:
+      port: 6379
+      host: localhost
+
 server:
   port: 1233
+
 kafka:
   server: localhost:9092
   group.id: server.broadcast
