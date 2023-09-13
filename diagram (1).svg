@@ -1,4 +1,876 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- created with bpmn-js / http://bpmn.io -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2122" height="557" viewBox="154 79 2122 557" version="1.1"><defs><pattern id="djs-grid-pattern-739240" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="0.5" cy="0.5" r="0.5" style="fill: rgb(204, 204, 204);"/></pattern><marker id="sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);"/></marker><marker id="conditional-default-flow-marker-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="0" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 6 4 L 10 16" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white;"/></marker><marker id="association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; stroke-dasharray: 10000, 1;"/></marker><marker id="messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="8.5" refY="5" markerWidth="20" markerHeight="20" orient="auto"><path d="m 1 5 l 0 -3 l 7 3 l -7 3 z" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: white; stroke-dasharray: 10000, 1;"/></marker><marker id="messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="6" refY="6" markerWidth="20" markerHeight="20" orient="auto"><circle cx="6" cy="6" r="3.5" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: white; stroke-dasharray: 10000, 1;"/></marker></defs><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Participant_0kpjxin" style="display: block;" transform="matrix(1 0 0 1 160 85)"><g class="djs-visual"><rect x="0" y="0" width="1140" height="290" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;" d="M30,0L30,290"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 290)"><tspan x="125.25" y="18.6">Клиент</tspan></text></g><rect class="djs-hit djs-hit-no-move" x="0" y="0" width="1140" height="290" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="1140" height="290" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="290" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="1152" height="302" class="djs-outline" style="fill: none;"/></g><g class="djs-children"><g class="djs-group"><g class="djs-element djs-shape" data-element-id="StartEvent_1y45yut" style="display: block;" transform="matrix(1 0 0 1 262 222)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="ExclusiveGateway_15hu1pt" style="display: block;" transform="matrix(1 0 0 1 415 215)"><g class="djs-visual"><polygon points="25,0 50,25 25,50 0,25" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z" style="fill: rgb(34, 36, 42); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_04a06q5" style="display: block;" transform="matrix(1 0 0 1 520 260)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="12.5" y="22">Получить все </tspan><tspan x="21.6171875" y="36.4">товары по </tspan><tspan x="19.0703125" y="50.8">выбранной </tspan><tspan x="22.5859375" y="65.19999999999999">категории</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0mnr1oq" style="display: block;" transform="matrix(1 0 0 1 640 110)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="12.5" y="14.799999999999999">Получить все </tspan><tspan x="21.6171875" y="29.199999999999996">товары по </tspan><tspan x="15.0234375" y="43.599999999999994">наилучшему </tspan><tspan x="10.9609375" y="57.99999999999999">совпадению в </tspan><tspan x="18.4609375" y="72.39999999999999">поисковике</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0cm8n5c" style="display: block;" transform="matrix(1 0 0 1 800 200)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="23.625" y="29.200000000000003">Получить </tspan><tspan x="19.8046875" y="43.6">страницу с </tspan><tspan x="23.375" y="58">товарами</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Gateway_1xvdkht" style="display: block;" transform="matrix(1 0 0 1 955 215)"><g class="djs-visual"><polygon points="25,0 50,25 25,50 0,25" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z" style="fill: rgb(34, 36, 42); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Event_18dne6r" style="display: block;" transform="matrix(1 0 0 1 1042 132)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 4px; fill: white; fill-opacity: 0.95;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0j063bk" style="display: block;" transform="matrix(1 0 0 1 1150 200)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="20.1796875" y="22">Сохранить </tspan><tspan x="29.328125" y="36.4">товар в </tspan><tspan x="28.28125" y="50.8">корзину </tspan><tspan x="12" y="65.19999999999999">пользователя</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="TextAnnotation_1v86fmr" style="display: block;" transform="matrix(1 0 0 1 370 110)"><g class="djs-visual"><rect x="0" y="0" width="100" height="41" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/><path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="7" y="17.799999999999997">Поиск через </tspan><tspan x="7" y="32.199999999999996">поисковик</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="TextAnnotation_065jpn0" style="display: block;" transform="matrix(1 0 0 1 360 310)"><g class="djs-visual"><rect x="0" y="0" width="100" height="41" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/><path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="7" y="17.799999999999997">Поиск по </tspan><tspan x="7" y="32.199999999999996">категориям</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="TextAnnotation_1w6ipc4" style="display: block;" transform="matrix(1 0 0 1 900 129)"><g class="djs-visual"><rect x="0" y="0" width="100" height="41" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/><path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="7" y="17.799999999999997">Страница </tspan><tspan x="7" y="32.199999999999996">пустая</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="SequenceFlow_0h21x7r" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M298,240L415,240"/></g><path d="M298,240L415,240" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="292" y="234" rx="4" width="129" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_0p5kox4" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M440,215L440,155C440,152.5,442.5,150,445,150L640,150"/></g><path d="M440,215L440,150L640,150" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="434" y="144" rx="4" width="212" height="77" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_1o57pqg" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M440,265L440,295C440,297.5,442.5,300,445,300L520,300"/></g><path d="M440,265L440,300L520,300" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="434" y="259" rx="4" width="92" height="47" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_1xosso9" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M900,240L955,240"/></g><path d="M900,240L955,240" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="894" y="234" rx="4" width="67" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_1tbc7m8" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M980,215L980,155C980,152.5,982.5,150,985,150L1042,150"/></g><path d="M980,215L980,150L1042,150" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="974" y="144" rx="4" width="74" height="77" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_0wscnnn" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1005,240L1150,240"/></g><path d="M1005,240L1150,240" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="999" y="234" rx="4" width="157" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Association_0nbj5jh" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5;" d="M459,150L408,110"/></g><path d="M459,150L408,110" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="402" y="104" rx="4" width="63" height="52" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Association_076xawu" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5;" d="M462.5,300L404,310"/></g><path d="M462.5,300L404,310" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="398" y="294" rx="4" width="70.5" height="22" class="djs-outline" style="fill: none;"/></g></g></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Participant_0d8n8ev" style="display: block;" transform="matrix(1 0 0 1 160 380)"><g class="djs-visual"><rect x="0" y="0" width="1140" height="250" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;" d="M30,0L30,250"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 250)"><tspan x="104.1953125" y="18.6">Сервер</tspan></text></g><rect class="djs-hit djs-hit-no-move" x="0" y="0" width="1140" height="250" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="1140" height="250" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="250" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="1152" height="262" class="djs-outline" style="fill: none;"/></g><g class="djs-children"><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0v0m9n0" style="display: block;" transform="matrix(1 0 0 1 530 420)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="19.515625" y="36.4">Получение </tspan><tspan x="18.328125" y="50.8">товара(-ов)</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_1tsosuu" style="display: block;" transform="matrix(1 0 0 1 555 545)"><g class="djs-visual"><path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0" style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_1tsosuu_label" style="display: block;" transform="matrix(1 0 0 1 561 602)"><g class="djs-visual"><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="0" y="9.899999999999999">Товары</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="38" height="14" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="50" height="26" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0ljdxsq" style="display: block;" transform="matrix(1 0 0 1 1150 420)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="20.1796875" y="22">Сохранить </tspan><tspan x="29.328125" y="36.4">товар в </tspan><tspan x="13.6953125" y="50.8">корзину по ip </tspan><tspan x="12" y="65.19999999999999">пользователя</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_0wn1o1p" style="display: block;" transform="matrix(1 0 0 1 1175 545)"><g class="djs-visual"><path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0" style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_0wn1o1p_label" style="display: block;" transform="matrix(1 0 0 1 1165 602)"><g class="djs-visual"><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="13.8828125" y="9.899999999999999">Корзина </tspan><tspan x="0" y="23.099999999999998">пользователя</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="70" height="27" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="82" height="39" class="djs-outline" style="fill: none;"/></g></g></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Participant_0x3ju8c" style="display: block;" transform="matrix(1 0 0 1 1420 380)"><g class="djs-visual"><rect x="0" y="0" width="850" height="250" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;" d="M30,0L30,250"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 250)"><tspan x="104.1953125" y="18.6">Сервер</tspan></text></g><rect class="djs-hit djs-hit-no-move" x="0" y="0" width="850" height="250" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="850" height="250" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="250" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="862" height="262" class="djs-outline" style="fill: none;"/></g><g class="djs-children"><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_0l7xbhr" style="display: block;" transform="matrix(1 0 0 1 1835 535)"><g class="djs-visual"><path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0" style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_0l7xbhr_label" style="display: block;" transform="matrix(1 0 0 1 1842 592)"><g class="djs-visual"><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="0" y="9.899999999999999">Заказы</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="37" height="14" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="49" height="26" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_0hdw868" style="display: block;" transform="matrix(1 0 0 1 1945 435)"><g class="djs-visual"><path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0" style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="DataStoreReference_0hdw868_label" style="display: block;" transform="matrix(1 0 0 1 1935 492)"><g class="djs-visual"><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="14.9609375" y="9.899999999999999">Данные </tspan><tspan x="0" y="23.099999999999998">пользователя </tspan><tspan x="0.9765625" y="36.3">для доставки</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="70" height="40" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="82" height="52" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_069kcnd" style="display: block;" transform="matrix(1 0 0 1 1810 420)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="10.6640625" y="43.599999999999994">Создать заказ</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_07dcvsc" style="display: block;" transform="matrix(1 0 0 1 1640 420)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="20.703125" y="22">Построить </tspan><tspan x="12.2421875" y="36.4">оптимальный </tspan><tspan x="13.4453125" y="50.8">маршрут для </tspan><tspan x="24.9765625" y="65.19999999999999">доставки</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_1xeimoi" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1740,460L1810,460"/></g><path d="M1740,460L1810,460" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1734" y="454" rx="4" width="82" height="12" class="djs-outline" style="fill: none;"/></g></g></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Participant_0ie6m32" style="display: block;" transform="matrix(1 0 0 1 1420 85)"><g class="djs-visual"><rect x="0" y="0" width="850" height="290" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;" d="M30,0L30,290"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 290)"><tspan x="125.25" y="18.6">Клиент</tspan></text></g><rect class="djs-hit djs-hit-no-move" x="0" y="0" width="850" height="290" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="850" height="290" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="290" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="862" height="302" class="djs-outline" style="fill: none;"/></g><g class="djs-children"><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Event_0gpbad4" style="display: block;" transform="matrix(1 0 0 1 1482 202)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Gateway_0u66c7w" style="display: block;" transform="matrix(1 0 0 1 1585 195)"><g class="djs-visual"><polygon points="25,0 50,25 25,50 0,25" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z" style="fill: rgb(34, 36, 42); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_1n4zw5j" style="display: block;" transform="matrix(1 0 0 1 1810 110)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="20.9140625" y="29.200000000000003">Нажать на </tspan><tspan x="31.78125" y="43.6">кнопку </tspan><tspan x="21.7890625" y="58">"заказать"</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_1b01h5l" style="display: block;" transform="matrix(1 0 0 1 2000 180)"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="23.625" y="29.200000000000003">Получить </tspan><tspan x="23.875" y="43.6">данные о </tspan><tspan x="24.921875" y="58">доставке</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Event_1ccw83x" style="display: block;" transform="matrix(1 0 0 1 2192 202)"><g class="djs-visual"><circle cx="18" cy="18" r="18" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><circle cx="18" cy="18" r="15" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: none;"/></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="TextAnnotation_0ebirjy" style="display: block;" transform="matrix(1 0 0 1 1470 260)"><g class="djs-visual"><rect x="0" y="0" width="100" height="41" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/><path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="7" y="17.799999999999997">Оформить </tspan><tspan x="7" y="32.199999999999996">заказ</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="TextAnnotation_1htilo7" style="display: block;" transform="matrix(1 0 0 1 1650 110)"><g class="djs-visual"><rect x="0" y="0" width="100" height="41" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/><path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/><text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"><tspan x="7" y="17.799999999999997">Пользователь </tspan><tspan x="7" y="32.199999999999996">авторизован</tspan></text></g><rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_0liff5p" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1518,220L1585,220"/></g><path d="M1518,220L1585,220" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1512" y="214" rx="4" width="79" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_08uv6lq" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1610,195L1610,155C1610,152.5,1612.5,150,1615,150L1810,150"/></g><path d="M1610,195L1610,150L1810,150" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1604" y="144" rx="4" width="212" height="57" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_0rd2wax" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M2100,220L2192,220"/></g><path d="M2100,220L2192,220" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="2094" y="214" rx="4" width="104" height="12" class="djs-outline" style="fill: none;"/></g></g></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="DataInputAssociation_1ebft9s" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M580,545L580,500"/></g><path d="M580,545L580,500" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="574" y="494" rx="4" width="12" height="57" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="DataOutputAssociation_0s785zg" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1200,500L1200,545"/></g><path d="M1200,500L1200,545" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1194" y="494" rx="4" width="12" height="57" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="DataInputAssociation_1xpxoio" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1945,460L1910,460"/></g><path d="M1945,460L1910,460" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1904" y="454" rx="4" width="47" height="12" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="DataOutputAssociation_0czmb2b" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1860,500L1860,535"/></g><path d="M1860,500L1860,535" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1854" y="494" rx="4" width="12" height="47" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="DataInputAssociation_1fuvgg2" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');" d="M1885,560L2045,560C2047.5,560,2050,557.5,2050,555L2050,260"/></g><path d="M1885,560L2050,560L2050,260" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1879" y="254" rx="4" width="177" height="312" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_10s36g8" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;" d="M570,340L570,420"/></g><path d="M570,340L570,420" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="564" y="334" rx="4" width="12" height="92" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_00abrxm" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;" d="M690,190L690,345C690,347.5,687.5,350,685,350L595,350C592.5,350,590,352.5,590,355L590,420"/></g><path d="M690,190L690,350L590,350L590,420" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="584" y="184" rx="4" width="112" height="242" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_0i2l3tu" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;" d="M630,460L845,460C847.5,460,850,457.5,850,455L850,280"/></g><path d="M630,460L850,460L850,280" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="624" y="274" rx="4" width="232" height="192" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_0q1necz" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;" d="M1200,280L1200,420"/></g><path d="M1200,280L1200,420" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1194" y="274" rx="4" width="12" height="152" class="djs-outline" style="fill: none;"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_1j60ebb" style="display: block;"><g class="djs-visual"><path data-corner-radius="5" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;" d="M1860,190L1860,420"/></g><path d="M1860,190L1860,420" class="djs-hit djs-hit-stroke" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/><rect x="1854" y="184" rx="4" width="12" height="242" class="djs-outline" style="fill: none;"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="2122" height="557" viewBox="154 79 2122 557" version="1.1">
+    <defs>
+        <pattern id="djs-grid-pattern-739240" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="0.5" cy="0.5" r="0.5" style="fill: rgb(204, 204, 204);"/>
+        </pattern>
+        <marker id="sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="11"
+                refY="10" markerWidth="10" markerHeight="10" orient="auto">
+            <path d="M 1 5 L 11 10 L 1 15 Z"
+                  style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);"/>
+        </marker>
+        <marker id="conditional-default-flow-marker-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20"
+                refX="0" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+            <path d="M 6 4 L 10 16"
+                  style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white;"/>
+        </marker>
+        <marker id="association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="11"
+                refY="10" markerWidth="10" markerHeight="10" orient="auto">
+            <path d="M 1 5 L 11 10 L 1 15"
+                  style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; stroke-dasharray: 10000, 1;"/>
+        </marker>
+        <marker id="messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="8.5"
+                refY="5" markerWidth="20" markerHeight="20" orient="auto">
+            <path d="m 1 5 l 0 -3 l 7 3 l -7 3 z"
+                  style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: white; stroke-dasharray: 10000, 1;"/>
+        </marker>
+        <marker id="messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8" viewBox="0 0 20 20" refX="6"
+                refY="6" markerWidth="20" markerHeight="20" orient="auto">
+            <circle cx="6" cy="6" r="3.5"
+                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: white; stroke-dasharray: 10000, 1;"/>
+        </marker>
+    </defs>
+    <g class="djs-group">
+        <g class="djs-element djs-shape" data-element-id="Participant_0kpjxin" style="display: block;"
+           transform="matrix(1 0 0 1 160 85)">
+            <g class="djs-visual">
+                <rect x="0" y="0" width="1140" height="290" rx="0" ry="0"
+                      style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/>
+                <path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;"
+                      d="M30,0L30,290"/>
+                <text lineHeight="1.2" class="djs-label"
+                      style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                      transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 290)">
+                    <tspan x="125.25" y="18.6">Клиент</tspan>
+                </text>
+            </g>
+            <rect class="djs-hit djs-hit-no-move" x="0" y="0" width="1140" height="290"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="1140" height="290"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="290"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="-6" y="-6" rx="4" width="1152" height="302" class="djs-outline" style="fill: none;"/>
+        </g>
+        <g class="djs-children">
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="StartEvent_1y45yut" style="display: block;"
+                   transform="matrix(1 0 0 1 262 222)">
+                    <g class="djs-visual">
+                        <circle cx="18" cy="18" r="18"
+                                style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="ExclusiveGateway_15hu1pt" style="display: block;"
+                   transform="matrix(1 0 0 1 415 215)">
+                    <g class="djs-visual">
+                        <polygon points="25,0 50,25 25,50 0,25"
+                                 style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z"
+                              style="fill: rgb(34, 36, 42); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_04a06q5" style="display: block;"
+                   transform="matrix(1 0 0 1 520 260)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="12.5" y="22">Получить все</tspan>
+                            <tspan x="21.6171875" y="36.4">товары по</tspan>
+                            <tspan x="19.0703125" y="50.8">выбранной</tspan>
+                            <tspan x="22.5859375" y="65.19999999999999">категории</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0mnr1oq" style="display: block;"
+                   transform="matrix(1 0 0 1 640 110)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="12.5" y="14.799999999999999">Получить все</tspan>
+                            <tspan x="21.6171875" y="29.199999999999996">товары по</tspan>
+                            <tspan x="15.0234375" y="43.599999999999994">наилучшему</tspan>
+                            <tspan x="10.9609375" y="57.99999999999999">совпадению в</tspan>
+                            <tspan x="18.4609375" y="72.39999999999999">поисковике</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0cm8n5c" style="display: block;"
+                   transform="matrix(1 0 0 1 800 200)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="23.625" y="29.200000000000003">Получить</tspan>
+                            <tspan x="19.8046875" y="43.6">страницу с</tspan>
+                            <tspan x="23.375" y="58">товарами</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Gateway_1xvdkht" style="display: block;"
+                   transform="matrix(1 0 0 1 955 215)">
+                    <g class="djs-visual">
+                        <polygon points="25,0 50,25 25,50 0,25"
+                                 style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z"
+                              style="fill: rgb(34, 36, 42); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Event_18dne6r" style="display: block;"
+                   transform="matrix(1 0 0 1 1042 132)">
+                    <g class="djs-visual">
+                        <circle cx="18" cy="18" r="18"
+                                style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 4px; fill: white; fill-opacity: 0.95;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0j063bk" style="display: block;"
+                   transform="matrix(1 0 0 1 1150 200)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="20.1796875" y="22">Сохранить</tspan>
+                            <tspan x="29.328125" y="36.4">товар в</tspan>
+                            <tspan x="28.28125" y="50.8">корзину</tspan>
+                            <tspan x="12" y="65.19999999999999">пользователя</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="TextAnnotation_1v86fmr" style="display: block;"
+                   transform="matrix(1 0 0 1 370 110)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="41" rx="0" ry="0"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/>
+                        <path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="7" y="17.799999999999997">Поиск через</tspan>
+                            <tspan x="7" y="32.199999999999996">поисковик</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="TextAnnotation_065jpn0" style="display: block;"
+                   transform="matrix(1 0 0 1 360 310)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="41" rx="0" ry="0"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/>
+                        <path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="7" y="17.799999999999997">Поиск по</tspan>
+                            <tspan x="7" y="32.199999999999996">категориям</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="TextAnnotation_1w6ipc4" style="display: block;"
+                   transform="matrix(1 0 0 1 900 129)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="41" rx="0" ry="0"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/>
+                        <path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="7" y="17.799999999999997">Страница</tspan>
+                            <tspan x="7" y="32.199999999999996">пустая</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="SequenceFlow_0h21x7r" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M298,240L415,240"/>
+                    </g>
+                    <path d="M298,240L415,240" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="292" y="234" rx="4" width="129" height="12" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_0p5kox4" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M440,215L440,155C440,152.5,442.5,150,445,150L640,150"/>
+                    </g>
+                    <path d="M440,215L440,150L640,150" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="434" y="144" rx="4" width="212" height="77" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_1o57pqg" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M440,265L440,295C440,297.5,442.5,300,445,300L520,300"/>
+                    </g>
+                    <path d="M440,265L440,300L520,300" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="434" y="259" rx="4" width="92" height="47" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_1xosso9" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M900,240L955,240"/>
+                    </g>
+                    <path d="M900,240L955,240" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="894" y="234" rx="4" width="67" height="12" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_1tbc7m8" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M980,215L980,155C980,152.5,982.5,150,985,150L1042,150"/>
+                    </g>
+                    <path d="M980,215L980,150L1042,150" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="974" y="144" rx="4" width="74" height="77" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_0wscnnn" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M1005,240L1150,240"/>
+                    </g>
+                    <path d="M1005,240L1150,240" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="999" y="234" rx="4" width="157" height="12" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Association_0nbj5jh" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5;"
+                              d="M459,150L408,110"/>
+                    </g>
+                    <path d="M459,150L408,110" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="402" y="104" rx="4" width="63" height="52" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Association_076xawu" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5;"
+                              d="M462.5,300L404,310"/>
+                    </g>
+                    <path d="M462.5,300L404,310" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="398" y="294" rx="4" width="70.5" height="22" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-shape" data-element-id="Participant_0d8n8ev" style="display: block;"
+           transform="matrix(1 0 0 1 160 380)">
+            <g class="djs-visual">
+                <rect x="0" y="0" width="1140" height="250" rx="0" ry="0"
+                      style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/>
+                <path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;"
+                      d="M30,0L30,250"/>
+                <text lineHeight="1.2" class="djs-label"
+                      style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                      transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 250)">
+                    <tspan x="104.1953125" y="18.6">Сервер</tspan>
+                </text>
+            </g>
+            <rect class="djs-hit djs-hit-no-move" x="0" y="0" width="1140" height="250"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="1140" height="250"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="250"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="-6" y="-6" rx="4" width="1152" height="262" class="djs-outline" style="fill: none;"/>
+        </g>
+        <g class="djs-children">
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0v0m9n0" style="display: block;"
+                   transform="matrix(1 0 0 1 530 420)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="19.515625" y="36.4">Получение</tspan>
+                            <tspan x="18.328125" y="50.8">товара(-ов)</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_1tsosuu" style="display: block;"
+                   transform="matrix(1 0 0 1 555 545)">
+                    <g class="djs-visual">
+                        <path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0"
+                              style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_1tsosuu_label"
+                   style="display: block;" transform="matrix(1 0 0 1 561 602)">
+                    <g class="djs-visual">
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="0" y="9.899999999999999">Товары</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="38" height="14"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="50" height="26" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0ljdxsq" style="display: block;"
+                   transform="matrix(1 0 0 1 1150 420)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="20.1796875" y="22">Сохранить</tspan>
+                            <tspan x="29.328125" y="36.4">товар в</tspan>
+                            <tspan x="13.6953125" y="50.8">корзину по ip</tspan>
+                            <tspan x="12" y="65.19999999999999">пользователя</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_0wn1o1p" style="display: block;"
+                   transform="matrix(1 0 0 1 1175 545)">
+                    <g class="djs-visual">
+                        <path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0"
+                              style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_0wn1o1p_label"
+                   style="display: block;" transform="matrix(1 0 0 1 1165 602)">
+                    <g class="djs-visual">
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="13.8828125" y="9.899999999999999">Корзина</tspan>
+                            <tspan x="0" y="23.099999999999998">пользователя</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="70" height="27"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="82" height="39" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-shape" data-element-id="Participant_0x3ju8c" style="display: block;"
+           transform="matrix(1 0 0 1 1420 380)">
+            <g class="djs-visual">
+                <rect x="0" y="0" width="850" height="250" rx="0" ry="0"
+                      style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/>
+                <path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;"
+                      d="M30,0L30,250"/>
+                <text lineHeight="1.2" class="djs-label"
+                      style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                      transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 250)">
+                    <tspan x="104.1953125" y="18.6">Сервер</tspan>
+                </text>
+            </g>
+            <rect class="djs-hit djs-hit-no-move" x="0" y="0" width="850" height="250"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="850" height="250"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="250"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="-6" y="-6" rx="4" width="862" height="262" class="djs-outline" style="fill: none;"/>
+        </g>
+        <g class="djs-children">
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_0l7xbhr" style="display: block;"
+                   transform="matrix(1 0 0 1 1835 535)">
+                    <g class="djs-visual">
+                        <path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0"
+                              style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_0l7xbhr_label"
+                   style="display: block;" transform="matrix(1 0 0 1 1842 592)">
+                    <g class="djs-visual">
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="0" y="9.899999999999999">Заказы</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="37" height="14"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="49" height="26" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_0hdw868" style="display: block;"
+                   transform="matrix(1 0 0 1 1945 435)">
+                    <g class="djs-visual">
+                        <path d="m  0,6.65 l  0,36.885245901639344 c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 l  0,-36.885245901639344 c -1.639344262295082,-8.196721311475411 -47.540983606557376,-8.196721311475411 -49.18032786885246,0c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0 m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411 49.18032786885246,0m  -49.18032786885246,5.737704918032787c  1.639344262295082,8.196721311475411 47.540983606557376,8.196721311475411  49.18032786885246,0"
+                              style="fill: white; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill-opacity: 0.95;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="DataStoreReference_0hdw868_label"
+                   style="display: block;" transform="matrix(1 0 0 1 1935 492)">
+                    <g class="djs-visual">
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="14.9609375" y="9.899999999999999">Данные</tspan>
+                            <tspan x="0" y="23.099999999999998">пользователя</tspan>
+                            <tspan x="0.9765625" y="36.3">для доставки</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="70" height="40"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="82" height="52" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_069kcnd" style="display: block;"
+                   transform="matrix(1 0 0 1 1810 420)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="10.6640625" y="43.599999999999994">Создать заказ</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_07dcvsc" style="display: block;"
+                   transform="matrix(1 0 0 1 1640 420)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="20.703125" y="22">Построить</tspan>
+                            <tspan x="12.2421875" y="36.4">оптимальный</tspan>
+                            <tspan x="13.4453125" y="50.8">маршрут для</tspan>
+                            <tspan x="24.9765625" y="65.19999999999999">доставки</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_1xeimoi" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M1740,460L1810,460"/>
+                    </g>
+                    <path d="M1740,460L1810,460" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="1734" y="454" rx="4" width="82" height="12" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-shape" data-element-id="Participant_0ie6m32" style="display: block;"
+           transform="matrix(1 0 0 1 1420 85)">
+            <g class="djs-visual">
+                <rect x="0" y="0" width="850" height="290" rx="0" ry="0"
+                      style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/>
+                <path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;"
+                      d="M30,0L30,290"/>
+                <text lineHeight="1.2" class="djs-label"
+                      style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                      transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 0 290)">
+                    <tspan x="125.25" y="18.6">Клиент</tspan>
+                </text>
+            </g>
+            <rect class="djs-hit djs-hit-no-move" x="0" y="0" width="850" height="290"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-click-stroke" x="0" y="0" width="850" height="290"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect class="djs-hit djs-hit-all" x="0" y="0" width="30" height="290"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="-6" y="-6" rx="4" width="862" height="302" class="djs-outline" style="fill: none;"/>
+        </g>
+        <g class="djs-children">
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Event_0gpbad4" style="display: block;"
+                   transform="matrix(1 0 0 1 1482 202)">
+                    <g class="djs-visual">
+                        <circle cx="18" cy="18" r="18"
+                                style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Gateway_0u66c7w" style="display: block;"
+                   transform="matrix(1 0 0 1 1585 195)">
+                    <g class="djs-visual">
+                        <polygon points="25,0 50,25 25,50 0,25"
+                                 style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <path d="m 16,15 7.42857142857143,9.714285714285715 -7.42857142857143,9.714285714285715 3.428571428571429,0 5.714285714285715,-7.464228571428572 5.714285714285715,7.464228571428572 3.428571428571429,0 -7.42857142857143,-9.714285714285715 7.42857142857143,-9.714285714285715 -3.428571428571429,0 -5.714285714285715,7.464228571428572 -5.714285714285715,-7.464228571428572 -3.428571428571429,0 z"
+                              style="fill: rgb(34, 36, 42); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="62" height="62" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_1n4zw5j" style="display: block;"
+                   transform="matrix(1 0 0 1 1810 110)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="20.9140625" y="29.200000000000003">Нажать на</tspan>
+                            <tspan x="31.78125" y="43.6">кнопку</tspan>
+                            <tspan x="21.7890625" y="58">"заказать"</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_1b01h5l" style="display: block;"
+                   transform="matrix(1 0 0 1 2000 180)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="23.625" y="29.200000000000003">Получить</tspan>
+                            <tspan x="23.875" y="43.6">данные о</tspan>
+                            <tspan x="24.921875" y="58">доставке</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="92" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Event_1ccw83x" style="display: block;"
+                   transform="matrix(1 0 0 1 2192 202)">
+                    <g class="djs-visual">
+                        <circle cx="18" cy="18" r="18"
+                                style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/>
+                        <circle cx="18" cy="18" r="15"
+                                style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: none;"/>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="36" height="36"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="48" height="48" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="TextAnnotation_0ebirjy" style="display: block;"
+                   transform="matrix(1 0 0 1 1470 260)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="41" rx="0" ry="0"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/>
+                        <path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="7" y="17.799999999999997">Оформить</tspan>
+                            <tspan x="7" y="32.199999999999996">заказ</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="TextAnnotation_1htilo7" style="display: block;"
+                   transform="matrix(1 0 0 1 1650 110)">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="41" rx="0" ry="0"
+                              style="stroke-linecap: round; stroke-linejoin: round; stroke: none; stroke-width: 2px; fill: none;"/>
+                        <path d="m 0, 0 m 10,0 l -10,0 l 0,41 l 10,0"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px;"/>
+                        <text lineHeight="1.2" class="djs-label"
+                              style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);">
+                            <tspan x="7" y="17.799999999999997">Пользователь</tspan>
+                            <tspan x="7" y="32.199999999999996">авторизован</tspan>
+                        </text>
+                    </g>
+                    <rect class="djs-hit djs-hit-all" x="0" y="0" width="100" height="41"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="-6" y="-6" rx="4" width="112" height="53" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_0liff5p" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M1518,220L1585,220"/>
+                    </g>
+                    <path d="M1518,220L1585,220" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="1512" y="214" rx="4" width="79" height="12" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_08uv6lq" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M1610,195L1610,155C1610,152.5,1612.5,150,1615,150L1810,150"/>
+                    </g>
+                    <path d="M1610,195L1610,150L1810,150" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="1604" y="144" rx="4" width="212" height="57" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_0rd2wax" style="display: block;">
+                    <g class="djs-visual">
+                        <path data-corner-radius="5"
+                              style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#sequenceflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                              d="M2100,220L2192,220"/>
+                    </g>
+                    <path d="M2100,220L2192,220" class="djs-hit djs-hit-stroke"
+                          style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+                    <rect x="2094" y="214" rx="4" width="104" height="12" class="djs-outline" style="fill: none;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="DataInputAssociation_1ebft9s" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                      d="M580,545L580,500"/>
+            </g>
+            <path d="M580,545L580,500" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="574" y="494" rx="4" width="12" height="57" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="DataOutputAssociation_0s785zg" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                      d="M1200,500L1200,545"/>
+            </g>
+            <path d="M1200,500L1200,545" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="1194" y="494" rx="4" width="12" height="57" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="DataInputAssociation_1xpxoio" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                      d="M1945,460L1910,460"/>
+            </g>
+            <path d="M1945,460L1910,460" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="1904" y="454" rx="4" width="47" height="12" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="DataOutputAssociation_0czmb2b" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                      d="M1860,500L1860,535"/>
+            </g>
+            <path d="M1860,500L1860,535" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="1854" y="494" rx="4" width="12" height="47" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="DataInputAssociation_1fuvgg2" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; stroke-dasharray: 0, 5; marker-end: url('#association-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8');"
+                      d="M1885,560L2045,560C2047.5,560,2050,557.5,2050,555L2050,260"/>
+            </g>
+            <path d="M1885,560L2050,560L2050,260" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="1879" y="254" rx="4" width="177" height="312" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="Flow_10s36g8" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;"
+                      d="M570,340L570,420"/>
+            </g>
+            <path d="M570,340L570,420" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="564" y="334" rx="4" width="12" height="92" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="Flow_00abrxm" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;"
+                      d="M690,190L690,345C690,347.5,687.5,350,685,350L595,350C592.5,350,590,352.5,590,355L590,420"/>
+            </g>
+            <path d="M690,190L690,350L590,350L590,420" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="584" y="184" rx="4" width="112" height="242" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="Flow_0i2l3tu" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;"
+                      d="M630,460L845,460C847.5,460,850,457.5,850,455L850,280"/>
+            </g>
+            <path d="M630,460L850,460L850,280" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="624" y="274" rx="4" width="232" height="192" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="Flow_0q1necz" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;"
+                      d="M1200,280L1200,420"/>
+            </g>
+            <path d="M1200,280L1200,420" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="1194" y="274" rx="4" width="12" height="152" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-connection" data-element-id="Flow_1j60ebb" style="display: block;">
+            <g class="djs-visual">
+                <path data-corner-radius="5"
+                      style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; marker-end: url('#messageflow-end-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); marker-start: url('#messageflow-start-white-hsl_225_10_15_-cbt69xvrpr8c4o2ach662hqh8'); stroke-dasharray: 10, 11;"
+                      d="M1860,190L1860,420"/>
+            </g>
+            <path d="M1860,190L1860,420" class="djs-hit djs-hit-stroke"
+                  style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+            <rect x="1854" y="184" rx="4" width="12" height="242" class="djs-outline" style="fill: none;"/>
+        </g>
+    </g>
+</svg>

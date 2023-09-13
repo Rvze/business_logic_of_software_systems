@@ -1,7 +1,7 @@
 package com.mpanchuk.app.config;
 
 import com.atomikos.icatch.jta.UserTransactionManager;
-import jakarta.transaction.TransactionManager;
+import javax.transaction.TransactionManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
