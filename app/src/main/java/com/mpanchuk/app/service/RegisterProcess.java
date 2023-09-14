@@ -11,6 +11,8 @@ import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 @RequiredArgsConstructor
 public class RegisterProcess implements JavaDelegate {
@@ -19,18 +21,25 @@ public class RegisterProcess implements JavaDelegate {
     private final JwtService jwtService;
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        System.out.println("ABAS");
-
         String username = (String) delegateExecution.getVariable("username") ;
         String password = (String) delegateExecution.getVariable("password") ;
         String role = (String) delegateExecution.getVariable("role") ;
 
-        var user = User.builder().username(username).password(passwordEncoder.encode(password)).role(Role.valueOf(role)).build();
+        try {
+            validate(username, role);
+        } catch (Exception e) {
+            throw new BpmnError("invalid_input");
+        }
 
-        repository.save(user);
-        System.out.println("CHLEN");
+        var user = User.builder().username(username).password(passwordEncoder.encode(password)).role(Role.valueOf(role)).build();
 
         var jwtToken = jwtService.generateToken(user) ;
         delegateExecution.setVariable("token", jwtToken);
+    }
+
+    private void  validate(String username, String role) throws Exception {
+        Optional<User> u = repository.findByUsername(username);
+        if (u.isPresent()) throw new UsernameExistsException();
+        if (!(role.equals("BUYER") || role.equals("SUPPLIER") || role.equals("ADMIN"))) throw new UsernameExistsException();
     }
 }
