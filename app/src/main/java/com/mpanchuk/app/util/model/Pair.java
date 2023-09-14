@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Pair<L extends Number, I extends Number> {
-    private Long first ;
-    private Integer second ;
+    private L first;
+    private I second;
 }

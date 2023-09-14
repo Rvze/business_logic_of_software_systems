@@ -4,12 +4,12 @@ import com.mpanchuk.app.model.Distance;
 import com.mpanchuk.app.repository.DistanceRepository;
 import com.mpanchuk.app.util.model.Adjacency;
 import com.mpanchuk.app.util.model.Pair;
-import javax.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +22,7 @@ public class GraphBuilder {
 
     private List<Adjacency> refs;
     private HashMap<Long, ArrayList<Pair<Long, Integer>>> nodes;
-    private final DistanceRepository distanceRepository ;
+    private final DistanceRepository distanceRepository;
 
     @PostConstruct
     public void init() {
@@ -31,7 +31,7 @@ public class GraphBuilder {
     }
 
     private void convert(List<Distance> list) {
-        refs = new ArrayList<>() ;
+        refs = new ArrayList<>();
         list.forEach(d -> refs.add(Adjacency
                 .builder()
                 .root(d.getCt1().getId())
@@ -41,10 +41,10 @@ public class GraphBuilder {
     }
 
     private void buildGraph() {
-        nodes = new HashMap<>() ;
+        nodes = new HashMap<>();
         long root;
         long child;
-        int distance ;
+        int distance;
 
         for (Adjacency ref : refs) {
             root = ref.getRoot();
@@ -56,8 +56,8 @@ public class GraphBuilder {
     }
 
     private void makeRef(long root, long child, int distance) {
-        ArrayList<Pair<Long, Integer>> values = nodes.getOrDefault(root, new ArrayList<>()) ;
-        values.add(new Pair<>(child, distance)) ;
+        ArrayList<Pair<Long, Integer>> values = nodes.getOrDefault(root, new ArrayList<>());
+        values.add(new Pair<>(child, distance));
         nodes.put(root, values);
     }
 }
