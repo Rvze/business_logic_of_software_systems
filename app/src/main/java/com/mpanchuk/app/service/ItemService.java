@@ -1,6 +1,5 @@
 package com.mpanchuk.app.service;
 
-import com.mpanchuk.app.config.TransactionManagerChecker;
 import com.mpanchuk.app.domain.request.ItemToAddRequest;
 import com.mpanchuk.app.domain.response.ItemResponse;
 import com.mpanchuk.app.domain.response.ItemToAddResponse;
@@ -33,7 +32,6 @@ public class ItemService {
     private final ItemToAddMapper itemToAddMapper;
     private final CityRepository cityRepository;
     private final ItemMapper mapper;
-    private final TransactionManagerChecker transactionManagerChecker;
 
     public Page<ItemResponse> getAllItems(int pageNo, int pageSize) {
         Pageable pageable = PageRequest.of(pageNo, pageSize);
@@ -55,7 +53,6 @@ public class ItemService {
      */
     @Transactional
     public void addItemFromSupplier(List<ItemToAddRequest> request) {
-        System.out.println(transactionManagerChecker.getTransactionManagerType());
         request.forEach(it -> {
             validateItemToAddRequest(it);
             var cities = cityRepository.findAllByNameIn(it.city());

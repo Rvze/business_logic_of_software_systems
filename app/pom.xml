@@ -71,11 +71,11 @@
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
         <!-- Atomikos dependencies -->
-        <dependency>
-            <groupId>com.atomikos</groupId>
-            <artifactId>transactions-spring-boot-starter</artifactId>
-            <version>6.0.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.atomikos</groupId>-->
+<!--            <artifactId>transactions-spring-boot-starter</artifactId>-->
+<!--            <version>6.0.0</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

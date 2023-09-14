@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/camunda
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: password
+#  jta:
+#    atomikos:
+#      datasource:
+#        unique-resource-name: t293jg2598g204jg034
+  jpa:
+    hibernate:
+          ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+  data:
+    redis:
+      port: 6379
+      host: localhost
+
+server:
+  port: 8080
+
+camunda.bpm:
+  admin-user:
+    id: demo
+    password: demo
+
+kafka:
+  server: localhost:9092
+  group.id: server.broadcast
+camunda:
+  bpm:
+    database:
+      schema-name: public
+      table-prefix: public.
