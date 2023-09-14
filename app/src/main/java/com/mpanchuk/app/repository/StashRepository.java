@@ -55,7 +55,15 @@ public class StashRepository {
         stash.setPrice(price);
         return stash;
     }
+    public int calcPrice(String username) {
+        Stash stash = repository.findByUsername(username);
+        if (stash == null) {
+            return 0;
+        }
 
+        return stash.getPrice();
+
+    }
     public Stash getStorage(String username) {
         return repository.findByUsername(username);
     }

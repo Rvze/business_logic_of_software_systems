@@ -38,9 +38,9 @@ camunda.bpm:
     id: demo
     password: demo
 
-kafka:
-  server: localhost:9092
-  group.id: server.broadcast
+#kafka:
+#  server: localhost:9092
+#  group.id: server.broadcast
 camunda:
   bpm:
     database:
