@@ -1,9 +1,10 @@
-package com.mpanchuk.app.service;
+package com.mpanchuk.app.delegators.register;
 
 import com.mpanchuk.app.exception.UsernameExistsException;
 import com.mpanchuk.app.model.Role;
 import com.mpanchuk.app.model.User;
 import com.mpanchuk.app.repository.UserRepository;
+import com.mpanchuk.app.service.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
@@ -15,7 +16,7 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class RegisterProcess implements JavaDelegate {
+public class RegisterDelegator implements JavaDelegate {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository repository;
     private final JwtService jwtService;

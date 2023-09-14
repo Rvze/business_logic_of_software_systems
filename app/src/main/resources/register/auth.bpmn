@@ -18,7 +18,7 @@
       <bpmn:outgoing>Flow_0nkzvfo</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_0nkzvfo" sourceRef="Activity_0dk7ndg" targetRef="Activity_0n92n7d" />
-    <bpmn:serviceTask id="Activity_0n92n7d" name="Зарегистрировать пользователя" camunda:delegateExpression="${registerProcess}">
+    <bpmn:serviceTask id="Activity_0n92n7d" name="Зарегистрировать пользователя" camunda:delegateExpression="${registerDelegator}">
       <bpmn:extensionElements>
         <camunda:inputOutput>
           <camunda:inputParameter name="Username">${username}</camunda:inputParameter>
