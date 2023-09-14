@@ -18,16 +18,17 @@ public class OrderService {
     public void makeOrder(CreateOrderDto createOrderDto) {
         UUID uuid = UUID.randomUUID();
         createOrderDto.setUuid(uuid);
-        CompletableFuture<SendResult<String, CreateOrderDto>> future = template.send("order-request", createOrderDto);
-        future.whenComplete((result, ex) -> {
-            if (ex == null) {
-                System.out.println("Sent message=[" + createOrderDto +
-                        "] with offset=[" + result.getRecordMetadata().offset() + "]");
-            } else {
-                System.out.println("Unable to send message=[" +
-                        createOrderDto + "] due to : " + ex.getMessage());
-            }
-        });
+        var future = template.send("order-request", createOrderDto);
+        //TODO
+//        future.whenComplete((result, ex) -> {
+//            if (ex == null) {
+//                System.out.println("Sent message=[" + createOrderDto +
+//                        "] with offset=[" + result.getRecordMetadata().offset() + "]");
+//            } else {
+//                System.out.println("Unable to send message=[" +
+//                        createOrderDto + "] due to : " + ex.getMessage());
+//            }
+//        });
     }
 
 //    @KafkaListener(topics = "order-request", groupId = "orders")

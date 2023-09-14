@@ -2,7 +2,7 @@ package com.mpanchuk.orderservice;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.mpanchuk.app.model.City;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;

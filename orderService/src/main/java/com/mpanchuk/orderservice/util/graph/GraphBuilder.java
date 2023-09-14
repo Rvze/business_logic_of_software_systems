@@ -4,7 +4,7 @@ import com.mpanchuk.orderservice.model.Distance;
 import com.mpanchuk.orderservice.repository.DistanceRepository;
 import com.mpanchuk.orderservice.util.model.Adjacency;
 import com.mpanchuk.orderservice.util.model.Pair;
-import jakarta.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

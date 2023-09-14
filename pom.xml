@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <groupId>com.mpanchuk</groupId>
     <properties>
-        <spring-core.version>6.0.9</spring-core.version>
+        <spring-core.version>5.3.26</spring-core.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -29,7 +29,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>3.0.6</version>
+                <version>2.7.10</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

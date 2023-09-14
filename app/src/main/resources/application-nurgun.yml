@@ -1,8 +1,6 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5433/blps?currentSchema=lab2
-    username: postgres
-    password:
     driver-class-name: org.postgresql.Driver
   jta:
     atomikos:
@@ -10,7 +8,7 @@ spring:
         unique-resource-name: t293jg2598g204jg034
   jpa:
     hibernate:
-#      ddl-auto: create
+    #      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -33,6 +31,16 @@ spring:
 server:
   port: 1233
 
+camunda.bpm:
+  admin-user:
+    id: demo
+    password: demo
+
 kafka:
   server: localhost:9092
   group.id: server.broadcast
+camunda:
+  bpm:
+    database:
+      schema-name: lab2
+      table-prefix: lab2.
