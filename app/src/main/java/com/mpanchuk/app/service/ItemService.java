@@ -1,6 +1,5 @@
 package com.mpanchuk.app.service;
 
-import com.mpanchuk.app.config.TransactionManagerChecker;
 import com.mpanchuk.app.domain.request.ItemToAddRequest;
 import com.mpanchuk.app.domain.response.ItemResponse;
 import com.mpanchuk.app.domain.response.ItemToAddResponse;
@@ -33,7 +32,6 @@ public class ItemService {
     private final ItemToAddMapper itemToAddMapper;
     private final CityRepository cityRepository;
     private final ItemMapper mapper;
-    private final TransactionManagerChecker transactionManagerChecker;
 
     public Page<ItemResponse> getAllItems(int pageNo, int pageSize) {
         Pageable pageable = PageRequest.of(pageNo, pageSize);
@@ -55,7 +53,6 @@ public class ItemService {
      */
     @Transactional
     public void addItemFromSupplier(List<ItemToAddRequest> request) {
-        System.out.println(transactionManagerChecker.getTransactionManagerType());
         request.forEach(it -> {
             validateItemToAddRequest(it);
             var cities = cityRepository.findAllByNameIn(it.city());
@@ -100,5 +97,25 @@ public class ItemService {
             throw new ItemToAddValidationException(String.format("Цена не может быть меньше 0! %s", request.price()));
         if (request.name() == null || request.name().equals(""))
             throw new ItemToAddValidationException("Название товара не может быть пустым!");
+    }
+
+
+    @Transactional
+    public void approveItemsAuto() {
+        var pageable = PageRequest.of(0, 199);
+        var itemsToAdd = itemToAddRepository.findAll(pageable);
+        Page<ItemToAddResponse> resp = itemsToAdd.map(itemToAddMapper::toResponse);
+        List<Long> ids = new ArrayList<>();
+        for (ItemToAddResponse itm : resp.getContent()) {
+            ids.add(itm.getId());
+        }
+
+        ids.forEach(it -> {
+            var itemToAdd = itemToAddRepository.findById(it).orElseThrow(
+                    () -> new NoSuchItemException(String.format("Item to add не сущетвует: %s", it)));
+            var item = mapper.toEntity(itemToAdd);
+            itemToAddRepository.delete(itemToAdd);
+            itemRepository.save(item);
+        });
     }
 }

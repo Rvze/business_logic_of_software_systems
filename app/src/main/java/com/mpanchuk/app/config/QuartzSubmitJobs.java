@@ -10,7 +10,9 @@ import org.springframework.scheduling.quartz.SimpleTriggerFactoryBean;
 
 @Configuration
 public class QuartzSubmitJobs {
-    private static final String CRON_EVERY_24_HOURS = "0 0 0 1/1 * ? *";
+    // private static final String CRON_EVERY_24_HOURS = "0 0 0 1/1 * ? *";
+
+    private static final String CRON_EVERY_MINUTE = "0 0/1 * ? * * *";
 
     @Bean(name = "approveItems")
     public JobDetailFactoryBean jobMemberClassStats() {
@@ -19,6 +21,6 @@ public class QuartzSubmitJobs {
 
     @Bean(name = "approveItemsTrigger")
     public CronTriggerFactoryBean triggerMemberClassStats(@Qualifier("approveItems") JobDetail jobDetail) {
-        return QuartzConfig.createCronTrigger(jobDetail, CRON_EVERY_24_HOURS, "Class Statistics Trigger");
+        return QuartzConfig.createCronTrigger(jobDetail, CRON_EVERY_MINUTE, "Class Statistics Trigger");
     }
 }
