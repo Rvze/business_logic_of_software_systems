@@ -1,5 +1,6 @@
 package com.mpanchuk.app.delegators.register;
 
+import com.mpanchuk.app.model.User;
 import com.mpanchuk.app.repository.UserRepository;
 import com.mpanchuk.app.service.JwtService;
 import lombok.RequiredArgsConstructor;
@@ -23,14 +24,15 @@ public class LoginDelegator implements JavaDelegate {
         String username = (String) delegateExecution.getVariable("username") ;
         String password = (String) delegateExecution.getVariable("password") ;
 
+        System.out.println("Login Delegator: " + username);
+        User user ;
         try {
-            var user = repository.findByUsername(username).orElseThrow();
+            user = repository.findByUsername(username).orElseThrow();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
-            var jwtToken = jwtService.generateToken(user);
-            delegateExecution.setVariable("jwt", jwtToken);
         } catch (Exception e) {
             throw new BpmnError("no_user") ;
         }
-
+        String jwtToken = jwtService.generateToken(user);
+        delegateExecution.setVariable("jwt_token", jwtToken);
     }
 }

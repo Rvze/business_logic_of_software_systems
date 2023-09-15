@@ -1,5 +1,6 @@
 package com.mpanchuk.app.delegators.stash;
 
+import com.google.gson.Gson;
 import com.mpanchuk.app.domain.response.StashResponse;
 import com.mpanchuk.app.mapper.CityMapper;
 import com.mpanchuk.app.mapper.ItemMapper;
@@ -11,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.camunda.bpm.engine.variable.Variables;
+import org.camunda.bpm.engine.variable.value.ObjectValue;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -29,7 +32,7 @@ public class AddItemDelegator implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
         Long itemId = (Long) delegateExecution.getVariable("item_id");
-        String jwt = (String) delegateExecution.getVariable("jwt_token");
+        String username = (String) delegateExecution.getVariable("username");
         Long amount = (Long) delegateExecution.getVariable("amount") ;
         Item item ;
 
@@ -39,9 +42,10 @@ public class AddItemDelegator implements JavaDelegate {
             throw new BpmnError("no_item") ;
         }
 
-        var stash = stashRepository.addItem(jwt, item, amount.intValue()) ;
+        var stash = stashRepository.addItem(username, item, amount.intValue()) ;
+        ObjectValue resJson = Variables.objectValue(mapper(stash)).serializationDataFormat("application/json").create();
 
-        delegateExecution.setVariable("stash", mapper(stash));
+       delegateExecution.setVariable("stash", resJson);
     }
 
     private List<StashResponse> mapper(Stash stash) {

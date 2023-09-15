@@ -12,6 +12,6 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 public class StashPair<L extends Item, I extends Number> implements Serializable {
-    private Item first ;
-    private Integer second ;
+    private L first ;
+    private I second ;
 }

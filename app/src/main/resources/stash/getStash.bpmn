@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_02m23tv" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.14.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="getStash" name="getStash" isExecutable="true">
+    <bpmn:startEvent id="Event_0p5i4x5">
+      <bpmn:outgoing>Flow_0yjjipm</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Activity_0vtwtmk" name="Залогиниться">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="username" label="username" type="string" />
+          <camunda:formField id="password" label="password" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0yjjipm</bpmn:incoming>
+      <bpmn:incoming>Flow_13fefto</bpmn:incoming>
+      <bpmn:outgoing>Flow_1vx2j8o</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_07cr2sp" name="Авторизовать пользователя" camunda:delegateExpression="${loginDelegator}">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="username">${username}</camunda:inputParameter>
+          <camunda:inputParameter name="password">${password}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1vx2j8o</bpmn:incoming>
+      <bpmn:outgoing>Flow_1dtssms</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:boundaryEvent id="Event_0mulwjg" attachedToRef="Activity_07cr2sp">
+      <bpmn:outgoing>Flow_13fefto</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0jgze7u" camunda:errorCodeVariable="no_user" camunda:errorMessageVariable="no_user" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_0yjjipm" sourceRef="Event_0p5i4x5" targetRef="Activity_0vtwtmk" />
+    <bpmn:sequenceFlow id="Flow_13fefto" sourceRef="Event_0mulwjg" targetRef="Activity_0vtwtmk" />
+    <bpmn:sequenceFlow id="Flow_1vx2j8o" sourceRef="Activity_0vtwtmk" targetRef="Activity_07cr2sp" />
+    <bpmn:sequenceFlow id="Flow_1dtssms" sourceRef="Activity_07cr2sp" targetRef="Activity_1vr57nj" />
+    <bpmn:serviceTask id="Activity_1vr57nj" name="Взять корзину пользователя" camunda:delegateExpression="${getStashDelegator}">
+      <bpmn:incoming>Flow_1dtssms</bpmn:incoming>
+      <bpmn:outgoing>Flow_0k0jwgf</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0k0jwgf" sourceRef="Activity_1vr57nj" targetRef="Activity_0ii8dv2" />
+    <bpmn:userTask id="Activity_0ii8dv2" name="Ознакомиться с корзиной">
+      <bpmn:incoming>Flow_0k0jwgf</bpmn:incoming>
+      <bpmn:outgoing>Flow_02gu6yb</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0bn2mn6" name="Корзина получена">
+      <bpmn:incoming>Flow_02gu6yb</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_02gu6yb" sourceRef="Activity_0ii8dv2" targetRef="Event_0bn2mn6" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_getStash">
+    <bpmndi:BPMNPlane id="BPMNPlane_getStash" bpmnElement="getStash">
+      <bpmndi:BPMNShape id="Event_0p5i4x5_di" bpmnElement="Event_0p5i4x5">
+        <dc:Bounds x="152" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mmc424_di" bpmnElement="Activity_0vtwtmk">
+        <dc:Bounds x="240" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ojt6eq_di" bpmnElement="Activity_07cr2sp">
+        <dc:Bounds x="240" y="220" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wddi2g_di" bpmnElement="Activity_1vr57nj">
+        <dc:Bounds x="430" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0t896p9_di" bpmnElement="Activity_0ii8dv2">
+        <dc:Bounds x="620" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0bn2mn6_di" bpmnElement="Event_0bn2mn6">
+        <dc:Bounds x="812" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="806" y="145" width="48" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0zg9rr6_di" bpmnElement="Event_0mulwjg">
+        <dc:Bounds x="222" y="252" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0yjjipm_di" bpmnElement="Flow_0yjjipm">
+        <di:waypoint x="188" y="120" />
+        <di:waypoint x="240" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13fefto_di" bpmnElement="Flow_13fefto">
+        <di:waypoint x="222" y="270" />
+        <di:waypoint x="202" y="270" />
+        <di:waypoint x="202" y="150" />
+        <di:waypoint x="240" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vx2j8o_di" bpmnElement="Flow_1vx2j8o">
+        <di:waypoint x="290" y="160" />
+        <di:waypoint x="290" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dtssms_di" bpmnElement="Flow_1dtssms">
+        <di:waypoint x="340" y="260" />
+        <di:waypoint x="385" y="260" />
+        <di:waypoint x="385" y="120" />
+        <di:waypoint x="430" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0k0jwgf_di" bpmnElement="Flow_0k0jwgf">
+        <di:waypoint x="530" y="120" />
+        <di:waypoint x="620" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02gu6yb_di" bpmnElement="Flow_02gu6yb">
+        <di:waypoint x="720" y="120" />
+        <di:waypoint x="812" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

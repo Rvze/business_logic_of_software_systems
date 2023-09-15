@@ -21,51 +21,51 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/stash")
 public class StashController implements SecuredRestController{
-    private final StashService stashService ;
-
-    @Autowired
-    public StashController(StashService stashService) {
-        this.stashService = stashService ;
-    }
-
-    @GetMapping("/ping")
-    public ResponseEntity<String> getCurrentUser() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth.getPrincipal() instanceof UserDetails userDetails) {
-            String username = userDetails.getUsername();
-            return ResponseEntity.status(HttpStatus.OK).body(username);
-        } else {
-            return ResponseEntity.status(HttpStatus.OK).body(auth.getPrincipal().toString());
-        }
-    }
-
-    @GetMapping("/")
-    public ResponseEntity<List<StashResponse>> getStash() {
-
-        var arr = stashService.getStash(getUsername());
-        if (arr == null) {
-            return ResponseEntity.noContent().build();
-        }
-        return new ResponseEntity<>(arr, HttpStatus.OK) ;
-    }
-
-    @PutMapping("/add")
-    public ResponseEntity<List<StashResponse>> addItem(@RequestParam int itemId, @RequestParam(defaultValue = "1") int amount) throws JsonProcessingException {
-        var arr = stashService.addItem(getUsername(), (long) itemId, amount);
-        return new ResponseEntity<>(arr, HttpStatus.CREATED) ;
-    }
-
-    @DeleteMapping("/delete")
-    public ResponseEntity<List<StashResponse>> deleteItem(@RequestParam int itemId, @RequestParam(defaultValue = "1") int amount) {
-        var arr = stashService.deleteItem(getUsername(), (long) itemId, amount);
-        return new ResponseEntity<>(arr, HttpStatus.OK);
-    }
-
-    private String getUsername() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth.getPrincipal() instanceof UserDetails userDetails) {
-            return userDetails.getUsername();
-        }
-        return "" ;
-    }
+//    private final StashService stashService ;
+//
+//    @Autowired
+//    public StashController(StashService stashService) {
+//        this.stashService = stashService ;
+//    }
+//
+//    @GetMapping("/ping")
+//    public ResponseEntity<String> getCurrentUser() {
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        if (auth.getPrincipal() instanceof UserDetails userDetails) {
+//            String username = userDetails.getUsername();
+//            return ResponseEntity.status(HttpStatus.OK).body(username);
+//        } else {
+//            return ResponseEntity.status(HttpStatus.OK).body(auth.getPrincipal().toString());
+//        }
+//    }
+//
+//    @GetMapping("/")
+//    public ResponseEntity<List<StashResponse>> getStash() {
+//
+//        var arr = stashService.getStash(getUsername());
+//        if (arr == null) {
+//            return ResponseEntity.noContent().build();
+//        }
+//        return new ResponseEntity<>(arr, HttpStatus.OK) ;
+//    }
+//
+//    @PutMapping("/add")
+//    public ResponseEntity<List<StashResponse>> addItem(@RequestParam int itemId, @RequestParam(defaultValue = "1") int amount) throws JsonProcessingException {
+//        var arr = stashService.addItem(getUsername(), (long) itemId, amount);
+//        return new ResponseEntity<>(arr, HttpStatus.CREATED) ;
+//    }
+//
+//    @DeleteMapping("/delete")
+//    public ResponseEntity<List<StashResponse>> deleteItem(@RequestParam int itemId, @RequestParam(defaultValue = "1") int amount) {
+//        var arr = stashService.deleteItem(getUsername(), (long) itemId, amount);
+//        return new ResponseEntity<>(arr, HttpStatus.OK);
+//    }
+//
+//    private String getUsername() {
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        if (auth.getPrincipal() instanceof UserDetails userDetails) {
+//            return userDetails.getUsername();
+//        }
+//        return "" ;
+//    }
 }

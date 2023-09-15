@@ -33,7 +33,7 @@ public class RegisterDelegator implements JavaDelegate {
         }
 
         var user = User.builder().username(username).password(passwordEncoder.encode(password)).role(Role.valueOf(role)).build();
-
+        repository.save(user) ;
         var jwtToken = jwtService.generateToken(user) ;
         delegateExecution.setVariable("token", jwtToken);
     }
