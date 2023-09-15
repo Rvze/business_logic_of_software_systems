@@ -33,19 +33,40 @@ public class AddItemDelegator implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         Long itemId = (Long) delegateExecution.getVariable("item_id");
         String username = (String) delegateExecution.getVariable("username");
+        String action = (String) delegateExecution.getVariable("action") ;
         Long amount = (Long) delegateExecution.getVariable("amount") ;
-        Item item ;
 
-        try {
-            item = itemRepository.findById(itemId).orElseThrow();
-        } catch (Exception e) {
-            throw new BpmnError("no_item") ;
+        Stash stash ;
+
+        if (action.equals("add")) {
+            try {
+                stash = addItem(username, itemId, amount) ;
+            } catch (Exception e) {
+                throw new BpmnError("no_item") ;
+            }
+        } else if (action.equals("delete")) {
+            try {
+                stash = deleteItem(username, itemId, amount) ;
+            } catch (Exception e) {
+                throw new BpmnError("no_item") ;
+            }
+        } else {
+            throw new BpmnError("no_action") ;
         }
 
-        var stash = stashRepository.addItem(username, item, amount.intValue()) ;
         ObjectValue resJson = Variables.objectValue(mapper(stash)).serializationDataFormat("application/json").create();
 
-       delegateExecution.setVariable("stash", resJson);
+        delegateExecution.setVariable("stash", resJson);
+    }
+
+    private Stash addItem(String username, Long itemId, Long amount) throws Exception {
+        Item item = itemRepository.findById(itemId).orElseThrow() ;
+        return stashRepository.addItem(username, item, amount.intValue());
+    }
+
+    private Stash deleteItem(String username, Long itemId, Long amount) throws Exception {
+        Item item = itemRepository.findById(itemId).orElseThrow() ;
+        return stashRepository.deleteItem(username, item, amount.intValue()) ;
     }
 
     private List<StashResponse> mapper(Stash stash) {

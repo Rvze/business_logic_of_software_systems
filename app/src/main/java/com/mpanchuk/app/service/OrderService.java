@@ -38,7 +38,7 @@ public class OrderService {
 
         Optional<City> optionalCity = cityRepository.findByName(destination);
         if (optionalCity.isEmpty()) {
-            throw new NoSuchElementException("city");
+            throw new NoSuchElementException();
         }
         Optional<Coupon> cp = couponRepository.findByName(coupon);
         City destinationCity = cityRepository.findByName(destination).orElseThrow();

@@ -38,9 +38,6 @@ public class StashRepository {
         itemRepository.save(item);
         stash.setPrice(price);
         repository.save(stash);
-
-        System.out.println(stash);
-        System.out.println("PERSISTED STORAGE" + repository.findByUsername(username));
         return stash;
     }
 
@@ -67,7 +64,6 @@ public class StashRepository {
 
     }
     public Stash getStorage(String username) {
-        System.out.println("GET STORAGE: " + repository.findByUsername(username));
         return repository.findByUsername(username);
     }
 }

@@ -24,7 +24,6 @@ public class LoginDelegator implements JavaDelegate {
         String username = (String) delegateExecution.getVariable("username") ;
         String password = (String) delegateExecution.getVariable("password") ;
 
-        System.out.println("Login Delegator: " + username);
         User user ;
         try {
             user = repository.findByUsername(username).orElseThrow();
