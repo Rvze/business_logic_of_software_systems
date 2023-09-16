@@ -1,6 +1,5 @@
 package com.mpanchuk.app.delegators.stash;
 
-import com.google.gson.Gson;
 import com.mpanchuk.app.domain.response.StashResponse;
 import com.mpanchuk.app.mapper.CityMapper;
 import com.mpanchuk.app.mapper.ItemMapper;
@@ -30,28 +29,28 @@ public class AddItemDelegator implements JavaDelegate {
     private final CityMapper cityMapper;
 
     @Override
-    public void execute(DelegateExecution delegateExecution) throws Exception {
+    public void execute(DelegateExecution delegateExecution) {
         Long itemId = (Long) delegateExecution.getVariable("item_id");
         String username = (String) delegateExecution.getVariable("username");
-        String action = (String) delegateExecution.getVariable("action") ;
-        Long amount = (Long) delegateExecution.getVariable("amount") ;
+        String action = (String) delegateExecution.getVariable("action");
+        Long amount = (Long) delegateExecution.getVariable("amount");
 
-        Stash stash ;
+        Stash stash;
 
         if (action.equals("add")) {
             try {
-                stash = addItem(username, itemId, amount) ;
+                stash = addItem(username, itemId, amount);
             } catch (Exception e) {
-                throw new BpmnError("no_item") ;
+                throw new BpmnError("no_item");
             }
         } else if (action.equals("delete")) {
             try {
-                stash = deleteItem(username, itemId, amount) ;
+                stash = deleteItem(username, itemId, amount);
             } catch (Exception e) {
-                throw new BpmnError("no_item") ;
+                throw new BpmnError("no_item");
             }
         } else {
-            throw new BpmnError("no_action") ;
+            throw new BpmnError("no_action");
         }
 
         ObjectValue resJson = Variables.objectValue(mapper(stash)).serializationDataFormat("application/json").create();
@@ -59,14 +58,14 @@ public class AddItemDelegator implements JavaDelegate {
         delegateExecution.setVariable("stash", resJson);
     }
 
-    private Stash addItem(String username, Long itemId, Long amount) throws Exception {
-        Item item = itemRepository.findById(itemId).orElseThrow() ;
+    private Stash addItem(String username, Long itemId, Long amount) {
+        Item item = itemRepository.findById(itemId).orElseThrow();
         return stashRepository.addItem(username, item, amount.intValue());
     }
 
-    private Stash deleteItem(String username, Long itemId, Long amount) throws Exception {
-        Item item = itemRepository.findById(itemId).orElseThrow() ;
-        return stashRepository.deleteItem(username, item, amount.intValue()) ;
+    private Stash deleteItem(String username, Long itemId, Long amount) {
+        Item item = itemRepository.findById(itemId).orElseThrow();
+        return stashRepository.deleteItem(username, item, amount.intValue());
     }
 
     private List<StashResponse> mapper(Stash stash) {

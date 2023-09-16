@@ -20,16 +20,16 @@ public class LoginDelegator implements JavaDelegate {
     private final JwtService jwtService;
 
     @Override
-    public void execute(DelegateExecution delegateExecution) throws Exception {
-        String username = (String) delegateExecution.getVariable("username") ;
-        String password = (String) delegateExecution.getVariable("password") ;
+    public void execute(DelegateExecution delegateExecution) {
+        String username = (String) delegateExecution.getVariable("username");
+        String password = (String) delegateExecution.getVariable("password");
 
-        User user ;
+        User user;
         try {
             user = repository.findByUsername(username).orElseThrow();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (Exception e) {
-            throw new BpmnError("no_user") ;
+            throw new BpmnError("no_user");
         }
         String jwtToken = jwtService.generateToken(user);
         delegateExecution.setVariable("jwt_token", jwtToken);

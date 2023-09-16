@@ -10,8 +10,8 @@ public class CheckPageVariables {
     private static final int PAGE_NUM = 0;
 
     public Pair<Integer, Integer> check(DelegateExecution delegateExecution) {
-        int pageNum = delegateExecution.hasVariable(Variables.PAGE_NUM) ? (int) delegateExecution.getVariable(Variables.PAGE_NUM) : PAGE_NUM;
-        int pageSize = delegateExecution.hasVariable(Variables.PAGE_SIZE) ? (int) delegateExecution.getVariable(Variables.PAGE_SIZE) : PAGE_SIZE;
-        return new Pair<>(pageNum, pageSize);
+        long pageNum = delegateExecution.hasVariable(Variables.PAGE_NUM) ? (Long) delegateExecution.getVariable(Variables.PAGE_NUM) : PAGE_NUM;
+        long pageSize = delegateExecution.hasVariable(Variables.PAGE_SIZE) ? (Long) delegateExecution.getVariable(Variables.PAGE_SIZE) : PAGE_SIZE;
+        return new Pair<>((int) pageNum, (int) pageSize);
     }
 }
